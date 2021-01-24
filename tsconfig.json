@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "rootDir": "resource",
+        "outDir": "dist",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "lib": [
+            "es5",
+            "es6",
+            "es7"
+        ],
+        "esModuleInterop": true
+    },
+    "include": [
+        "resource/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
