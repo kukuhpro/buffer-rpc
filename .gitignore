@@ -3,3 +3,4 @@ coverage
 .vscode
 yarn.lock
 dist
+old_test

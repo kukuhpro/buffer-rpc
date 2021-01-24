@@ -11,12 +11,20 @@
             "es6",
             "es7"
         ],
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "plugins": [
+            {
+                "transform": "ts-auto-mock/transformer",
+                "cacheBetweenTests": false
+            }
+        ]
     },
     "include": [
         "resource/**/*.ts"
     ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "**/*.test.ts",
+        "**/*.jest.ts"
     ]
 }
