@@ -4,9 +4,9 @@ export default (error: Error, req: Request, res: Response, next: NextFunction): 
     if (res.headersSent) {
         return next(error)
     }
-    res.status(500).send({
+    res.status(500).json({
         error: error.message,
-        code: 5000,
+        code: 500,
         handled: false,
     })
     return

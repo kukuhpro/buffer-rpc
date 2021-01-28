@@ -1,6 +1,3 @@
-import { createMock } from 'ts-auto-mock'
-import { On, method } from 'ts-auto-mock/extension'
-
 import faker from 'faker'
 
 
@@ -32,7 +29,7 @@ describe('createError', () => {
 
     test('should create an error with default code', () => {
         const message: string = faker.random.words()
-        const code: number = faker.random.number()
+        const code: number = 1000
         const error = createError({
             message,
         })
@@ -57,7 +54,7 @@ describe('createError', () => {
 
     test('should create an error that is handled = false', () => {
         const message: string = faker.random.words()
-        const handled: boolean = faker.random.number()
+        const handled: boolean = faker.random.boolean()
         const error = createError({
             message,
             handled,
